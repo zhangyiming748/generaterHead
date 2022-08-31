@@ -13,7 +13,7 @@ func Head(fname, title, subtitle, author, catalog, tags string) (string, []strin
 	md = append(md, delimiter)
 	layout := strings.Join([]string{"layout:", "post", "# 使用的布局(不需要改)"}, "\t")
 	md = append(md, layout)
-	title = strings.Join([]string{"title:", title, "标题"}, "\t")
+	title = strings.Join([]string{"title:", title, "# 标题"}, "\t")
 	md = append(md, title)
 	subtitle = strings.Join([]string{"subtitle:", subtitle, "# 副标题"}, "\t")
 	md = append(md, subtitle)
@@ -28,7 +28,7 @@ func Head(fname, title, subtitle, author, catalog, tags string) (string, []strin
 	md = append(md, catalog)
 	tag := strings.Join([]string{"tags:", "# 标签"}, "\t")
 	md = append(md, tag)
-	tags = strings.Join([]string{"-", tags}, " ")
+	tags = strings.Join([]string{"\t-", tags}, " ")
 	md = append(md, tags)
 	md = append(md, delimiter)
 
