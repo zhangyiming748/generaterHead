@@ -1,15 +1,44 @@
-# Binaries for programs and plugins
+*.txt
+vendor
+# 忽略 test 文件夹
+test
+# 忽略 idea 文件夹
+.idea
+__pycache__
+# 忽略媒体文件
+users.txt
+*.mp4
+*.m4s
+done
+# 忽略日志文件
+*.log
+# 忽略用于测试的文件
+*.md
+*.zip
+*.rpm
+*.deb
+*.blockmap
 *.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
-# Dependency directories (remove the comment below to include it)
-# vendor/
+*.jpg
+*.png
+#忽略macos文件
+.DS_Store
+#忽略产生的中间文件
+info.txt
+list.txt
+build
+dist
+*.spec
+/BS4/PHUB/data/
+forWin64.exe
+forWin32.exe
+forRaspi
+forMac
+forM1
+forLinux32
+forLinux64
+forAndroid
+*.html
+forRaspi64
+/BS4/XM/data/
+/GB/
