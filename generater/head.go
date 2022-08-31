@@ -31,8 +31,13 @@ func Head(fname, title, subtitle, author, catalog, tags string) (string, []strin
 	tags = strings.Join([]string{"-", tags}, " ")
 	md = append(md, tags)
 	md = append(md, delimiter)
-	fmt.Println(t)
+
 	titletime := time.Now().Format("2006-01-02")
 	fname = strings.Join([]string{titletime, "-", fname, ".md"}, "")
 	return fname, md
+}
+func MarketingGenerater(subject, event, otherword string) string {
+	s := strings.Join([]string{subject, event, "是怎么回事呢?", subject, "相信大家都很熟悉,但是", subject, event, "是怎么回事呢,下面就让小编带大家一起了解吧<br>", subject, event, ",其实就是", otherword, ",大家可能会很惊讶", subject, "怎么会", event, "呢?但事实就是这样,小编也感到非常惊讶<br>这就是关于", subject, event, "的事情了,大家有什么想法呢,欢迎在评论区告诉小编一起讨论哦!"}, "")
+	fmt.Println(s)
+	return s
 }

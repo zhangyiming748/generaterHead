@@ -10,10 +10,14 @@ import (
 func main() {
 	fname := generater.GetVal("head", "fname")
 	title := generater.GetVal("head", "title")
-	subtitle := generater.GetVal("head", "subtitle")
+	subject := generater.GetVal("subtitle", "subject")
+	event := generater.GetVal("subtitle", "event")
+	otherword := generater.GetVal("subtitle", "otherword")
+	subtitle := generater.MarketingGenerater(subject, event, otherword)
 	author := generater.GetVal("head", "author")
 	catalog := generater.GetVal("head", "catalog")
 	tags := generater.GetVal("head", "tags")
+
 	fname, ret := generater.Head(fname, title, subtitle, author, catalog, tags)
 	writeLines(fname, ret)
 }
